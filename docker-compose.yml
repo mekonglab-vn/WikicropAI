@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  jupyterhub:
+    build: .
+    container_name: jupyterhub_server
+    ports:
+      - "9090:8000"
+    volumes:
+      - ./jupyterhub_config.py:/srv/jupyterhub/jupyterhub_config.py
+      - /var/run/docker.sock:/var/run/docker.sock
+      - jupyterhub_data:/srv/jupyterhub
+    restart: always
+    environment:
+      # Cấu hình Keycloak
+      KEYCLOAK_URL: "http://host.docker.internal:8080"
+      KEYCLOAK_REALM: "wikicrop"
+      KEYCLOAK_CLIENT_ID: "jupyterhub"
+      KEYCLOAK_CLIENT_SECRET: "ckdDggVPs6xbp09kVDLpZiqXU15nST5d"
+    networks:
+      - jupyter_network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+volumes:
+  jupyterhub_data:
+
+networks:
+  jupyter_network:
+    name: jupyter_network
