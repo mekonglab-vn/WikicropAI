@@ -1,0 +1,26 @@
+[CHROMADB]
+# type = cloud or local
+# cloud requires: api_key, tenant, database
+# local requires: path (e.g. ./chroma_data)
+type = cloud
+api_key = your_api_key_here
+tenant = your_teant_here
+database = your_database_name
+collection = your_collection_name
+
+[LLM]
+provider = OpenAI/SambaNova/Together/Ollama
+base_url = your_base_url
+api_key = your_api_key
+model_name = your_model_name
+
+[LLM_SMALL]
+# Optional - if want a smaller LLM to process small tasks
+provider = OpenAI/SambaNova/Together/Ollama
+base_url = your_base_url
+api_key = your_api_key
+model_name = your_model_name
+
+[ADMIN]
+username = your_bot_account_username
+password = yout_bot_account_password

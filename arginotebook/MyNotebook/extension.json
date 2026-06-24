@@ -1,0 +1,39 @@
+{
+    "name": "MyNotebook",
+    "version": "1.0.0",
+    "author": "Hoang Phuc",
+    "url": "https://www.mediawiki.org/wiki/Extension:MyNotebook",
+    "description": "Hệ thống Sổ tay Nông nghiệp tích hợp AI",
+    "type": "specialpage",
+    "manifest_version": 2,
+    "AutoloadNamespaces": {
+        "MyNotebook\\": "src/"
+    },
+    "SpecialPages": {
+        "MyNotebook": {
+            "class": "MyNotebook\\SpecialMyNotebook"
+        }
+    },
+    "ResourceFileModulePaths": {
+        "localBasePath": "",
+        "remoteExtPath": "MyNotebook"
+    },
+    "ResourceModules": {
+        "ext.myNotebook.scripts": {
+            "scripts": [
+                "resources/js/i18n.js",
+                "resources/js/api_client.js",
+                "resources/js/llm_manager.js",
+                "resources/js/template_manager.js",
+                "resources/js/source_manager.js",
+                "resources/js/dashboard.js",
+                "resources/js/workspace.js"
+                
+            ],
+            "styles": [
+                "resources/css/workspace.css"
+            ],
+            "position": "bottom"
+        }
+    }
+}

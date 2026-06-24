@@ -1,0 +1,33 @@
+/* ================= BỐ CỤC CHÍNH ================= */
+.ws-container { display: flex; gap: 20px; font-family: sans-serif; min-height: 75vh; margin-top: 15px; align-items: stretch; }
+.ws-column { border: 1px solid #cbd5e1; border-radius: 8px; display: flex; flex-direction: column; }
+
+.ws-col-left { flex: 1.2; padding: 15px; background: #f8fafc; }
+.ws-col-main { flex: 3; padding: 20px; background: #ffffff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+.ws-col-right { flex: 0.8; padding: 15px; background: #f8fafc; height: fit-content; }
+
+/* ================= TIÊU ĐỀ & NÚT BẤM ================= */
+.ws-title { margin-top: 0; color: #0f172a; }
+.ws-title-sm { font-size: 1.2em; }
+.ws-title-lg { font-size: 1.5em; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; margin-bottom: 15px; }
+
+.ws-btn { border: none; border-radius: 4px; cursor: pointer; font-weight: bold; transition: all 0.2s; }
+.ws-btn-back { padding: 8px 12px; background: #e2e8f0; color: #334155; display: flex; align-items: center; gap: 5px; margin-bottom: 20px; width: fit-content; }
+.ws-btn-add-source { width: 100%; padding: 12px; background: #ffffff; border: 2px dashed #2C7878; border-radius: 8px; color: #2C7878; font-size: 14px; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 15px; }
+.ws-btn-add-source:hover { background: #f0f9ff; border-color: #3b82f6; }
+.ws-btn-action { width: 100%; margin-bottom: 12px; padding: 10px; font-weight:500; }
+
+/* ================= KHU VỰC ĐỌC & SOẠN THẢO ================= */
+.ws-article-view { flex: 1; overflow-y: auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 6px; margin-bottom: 15px; background: #fafafa; line-height: 1.7; font-size: 15px; color: #334155; }
+.ws-article-edit { flex: 1; display: none; padding: 15px; margin-bottom: 15px; border: 1px solid #cbd5e1; border-radius: 6px; resize: vertical; min-height: 400px; font-family: monospace; font-size: 14px; line-height: 1.6; }
+
+/* ================= MODAL & TOOLTIP ================= */
+.ws-tooltip { position: fixed; background: #ffffff; border: 1px solid #cbd5e1; padding: 15px; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.15); z-index: 9999; max-width: 350px; font-size: 13px; line-height: 1.6; color: #334155; transition: opacity 0.2s ease; }
+.ws-modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 10000; align-items: center; justify-content: center; display: none; }
+.ws-modal-overlay-dark { background: rgba(15, 23, 42, 0.6); }
+.ws-modal-overlay-blur { background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(2px); font-family: sans-serif; }
+.ws-modal-box { background: #fff; display: flex; flex-direction: column; box-shadow: 0 10px 25px rgba(0,0,0,0.2); position: relative; }
+.ws-btn.ws-btn-add-source
+{
+    color: '#187A35';
+}

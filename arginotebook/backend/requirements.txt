@@ -1,0 +1,35 @@
+# Web framework
+fastapi
+uvicorn
+
+# Database
+sqlalchemy
+pymysql
+
+# Data validation
+pydantic
+
+# HTTP client
+requests
+
+# LLM providers
+openai
+together
+sambanova
+
+# Vector store
+chromadb
+
+# Embeddings & reranking
+sentence-transformers
+
+# Text splitting
+langchain-text-splitters
+
+# Content extraction
+trafilatura
+PyMuPDF
+python-docx
+yt-dlp
+youtube-transcript-api
+openai-whisper
